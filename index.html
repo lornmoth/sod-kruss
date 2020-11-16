@@ -1,0 +1,211 @@
+<html>
+<head>
+<title>sod & kruss</title>
+
+<link href="https://www.fontify.me/wf/b3579fc25d623dd3ce9b17097c8b649c" rel="stylesheet" type="text/css">
+<style>
+body{
+  padding:30px;
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "TNR";
+    src: url("./TNR.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "kochfraktur";
+    src: url("./kochfraktur.otf") format("opentype");
+}
+
+header{
+  position:fixed;
+  top:50px;
+  left:50px;
+  z-index:3;
+
+}
+
+.hg {
+  display: flex;
+  flex-direction: column;
+}
+
+.hg-body {
+  display: flex;
+  flex: 1;
+}
+
+.hg-content {
+  margin:150px 0 0 420px;
+  flex: 1;
+}
+
+.hg-nav {
+  /* put the nav on the left */
+  position:fixed;
+  top:150px;
+  flex: 0 0 200px;
+  font-family: "kochfraktur";
+  font-weight:bolder;
+  letter-spacing: -2px;
+  font-size:40px;
+  width:200px;
+  order: -1;
+}
+
+a:link, a:visited {
+    color: #000;
+    text-decoration: none;
+    cursor: auto;
+}
+
+a:link:active, a:visited:active, ul a:hover {
+    color: red;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+    image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+    image-rendering: -moz-crisp-edges;          /* Firefox                        */
+    image-rendering: -o-crisp-edges;            /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: pixelated; /* Chrome */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+
+}
+
+.item{
+  position:relative;
+
+  font-family: "TNR";
+  font-weight:bolder;
+  width:400px;
+  float:left;
+  margin:0 100px 130px 0;
+}
+
+.album-year{
+  position:absolute;
+  margin:0 auto;
+  width:400px;
+  margin-top:60px;
+  z-index: -1;
+  text-align:center;
+  font-size:130px;
+  color:#FFF;
+  letter-spacing: -7px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: red;
+
+
+}
+
+.album-data{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.album-artist, .album-name{
+
+  display:inline-block;
+  background:red;
+  text-align: center;
+  position:relative;
+  vertical-align: middle;
+
+  font-size:35px;
+  line-height: 23px;
+  vertical-align: middle;
+
+  top:35px;
+  margin-top:20px;
+  white-space:nowrap;
+  letter-spacing: -2px;
+  padding:0px 15px;
+  text-transform: uppercase;
+}
+
+.item>img{
+  width:300px;
+  height:300px;
+  display:block;
+  margin:0 auto;
+}
+
+</style>
+
+
+</head>
+<body class="hg">
+  <header><img src="logo.png" width="530px" alt="Sod & Kruss"></header>
+  <div class="hg-body">
+    <main class="hg-content">
+
+      <a href="#">
+      <div class="item">
+        <img src="images/niggaz_of_destruction.jpg" height="400px" width="400px" alt="">
+        <div class="album-year"><img src="years/1996.png"></div>
+        <br>
+        <div class="album-data">
+          <span class="album-artist">N.O.D.</span>
+          <span class="album-name">Niggaz of Destruction</span>
+        </div>
+      </div>
+      </a>
+
+      <a href="#">
+      <div class="item">
+        <img src="images/wanted_doa.jpg" height="400px" width="400px" alt="">
+        <div class="album-year"><img src="years/1995.png"></div>
+        <br>
+        <div class="album-data">
+          <span class="album-artist">Ten Wanted Men</span>
+          <span class="album-name">Wanted: Dead Or Alive</span>
+        </div>
+      </div>
+      </a>
+
+      <a href="#">
+      <div class="item">
+        <img src="images/3_n_the_mornin.jpg" height="400px" width="400px" alt="">
+        <div class="album-year"><img src="years/1996.png"></div>
+        <br>
+        <div class="album-data">
+          <span class="album-artist">DJ Screw</span>
+          <span class="album-name">3 'N The Mornin'</span>
+        </div>
+      </div>
+      </a>
+
+      <a href="#">
+      <div class="item">
+        <img src="images/killaz_from_the_blackside.jpg" height="400px" width="400px" alt="">
+        <div class="album-year"><img src="years/1996.png"></div>
+        <br>
+        <div class="album-data">
+          <span class="album-artist">2nd Family</span>
+          <span class="album-name">Killaz From The Blackside</span>
+        </div>
+      </div>
+      </a>
+
+    </main>
+    <nav class="hg-nav">
+      <ul>
+        <li><a href="#">tapes</a></li>
+        <li><a href="#">prints</a></li>
+        <li><a href="#">about</a></li>
+      </ul>
+    </nav>
+  </div>
+</body>
+
+</html>
